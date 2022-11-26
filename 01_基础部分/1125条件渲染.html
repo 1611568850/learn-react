@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div id="root"></div>
+  <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+  <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+  <script type="text/babel">
+    const root = ReactDOM.createRoot(document.getElementById('root'))
+    class App extends React.Component {
+      constructor() {
+        super()
+        this.state = {
+          message: '100',
+          isShow: true
+        }
+      }
+      render() {
+        const { message, isShow } = this.state
+        const changeShow = () => {
+          this.setState({
+            isShow: !isShow,
+          })
+        }
+        return (
+          <div>
+            <button onClick={changeShow} >切换隐藏</button>
+            {isShow && <h2>{message}</h2>}
+          </div >
+        )
+      }
+    }
+    root.render(<App />)
+  </script>
+</body>
+
+</html>

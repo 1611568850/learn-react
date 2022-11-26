@@ -1,0 +1,15 @@
+.categoryContainer {
+  width: 100%;
+}
+.categoryUl {
+  display: flex;
+}
+.categoryItem {
+  flex: 1;
+  /* background-color: blue; */
+  padding: 10px;
+  text-align: center;
+}
+.categoryItem .highLight{
+  border-bottom: 3px solid red;
+}
