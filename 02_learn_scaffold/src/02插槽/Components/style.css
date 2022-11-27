@@ -1,0 +1,16 @@
+.navContainer {
+  display: flex;
+  text-align: center;
+}
+.left {
+  width: 80px;
+  background: red;
+}
+.right {
+  width: 80px;
+  background: blue;
+}
+.center {
+  flex: 1;
+  background: yellow;
+}
